@@ -364,6 +364,7 @@ public class SemaforoGUI extends JFrame {
                     }
                     animacion.stop();
                 }
+                panelInterseccion.repaint();
             });
             animacion.start();
         });
