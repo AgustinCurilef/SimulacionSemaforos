@@ -136,8 +136,8 @@ public class SemaforoGUI extends JFrame {
         // Dibujar semáforos
         dibujarSemaforo(g2d, centerX, 50, "Norte"); // Norte
         dibujarSemaforo(g2d, centerX, height - 50, "Sur"); // Sur
-        dibujarSemaforo(g2d, 50, centerY, "Este"); // Este
-        dibujarSemaforo(g2d, width - 50, centerY, "Oeste"); // Oeste
+        dibujarSemaforo(g2d, 50, centerY, "Oeste"); // Oeste
+        dibujarSemaforo(g2d, width - 50, centerY, "Este"); // Este
 
         // Dibujar filas de autos
         dibujarFilasAutos(g2d, centerX, centerY, carreteraAncho);
@@ -208,8 +208,8 @@ public class SemaforoGUI extends JFrame {
             g2d.drawString(autosSur.get(i), x - 10, y + 25);
         }
 
-        // Este - autos esperando hacia la derecha
-        List<String> autosEste = filasAutos.get("Este");
+        // Oeste - autos esperando hacia la derecha
+        List<String> autosEste = filasAutos.get("Oeste");
         for (int i = 0; i < autosEste.size(); i++) {
             int x = centerX - 100 - (i * spacing);
             int y = centerY + autoSize;
@@ -219,8 +219,8 @@ public class SemaforoGUI extends JFrame {
             g2d.drawString(autosEste.get(i), x - 15, y - 5);
         }
 
-        // Oeste - autos esperando hacia la izquierda
-        List<String> autosOeste = filasAutos.get("Oeste");
+        // Este - autos esperando hacia la izquierda
+        List<String> autosOeste = filasAutos.get("Este");
         for (int i = 0; i < autosOeste.size(); i++) {
             int x = centerX + 100 + (i * spacing);
             int y = centerY - autoSize;

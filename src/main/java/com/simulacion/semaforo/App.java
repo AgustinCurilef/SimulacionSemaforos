@@ -58,7 +58,7 @@ public class App {
 
         // Mantener el programa corriendo
         try {
-            Thread.sleep(120000); // 2 minutos de simulación
+            Thread.sleep(60000); // 1 minutode simulación
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
